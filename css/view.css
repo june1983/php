@@ -1,0 +1,19 @@
+.delete-button {
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 700;
+  color: brown;
+  padding: 5px 10px;
+  background-color: #fff;
+  border-radius: 45px;
+  text-align: center;
+  text-decoration: none;
+}
+
+.msg > a:hover {
+  color: brown;  
+}
+.p-3 {
+	color: #ffffff;
+	background: rgb(29, 155, 240);	/*”wŒiFA”wŒi‰æ‘œ‚Ì“Ç‚İ‚İB*/
+}

@@ -18,6 +18,7 @@ $posts->execute(array($_REQUEST['id']));
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Bootstrap Sample</title>
+    <link href="css/view.css" rel="stylesheet">
     <!-- BootstrapのCSS読み込み -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <!-- jQuery読み込み -->
@@ -45,11 +46,14 @@ $posts->execute(array($_REQUEST['id']));
     <?php
     if ($post = $posts->fetch()):
     ?>
-    <div class="p-3 mb-2 bg-danger bg-gradient text-white">
+    <div class="p-3">
       <div class="msg">
         <img src="member_picture/<?php echo htmlspecialchars($post['picture'], ENT_QUOTES); ?>" width="48" height="48" alt="<?php echo htmlspecialchars($post['name'], ENT_QUOTES); ?>" />
         <p><?php echo htmlspecialchars($post['message'], ENT_QUOTES); ?><span class="name">(<?php echo htmlspecialchars($post['name'], ENT_QUOTES); ?>)</span></p>
         <p class="day"><?php echo htmlspecialchars($post['created'], ENT_QUOTES); ?></p>
+        <?php if($_SESSION['id']==$post['member_id']):?>
+          <a class="delete-button" href="delete.php?id=<?php echo ($post['id']); ?>">投稿を削除する</a>
+        <?php endif;?> 
       </div>
     </div>
     <?php

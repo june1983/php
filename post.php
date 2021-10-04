@@ -61,10 +61,10 @@ $posts = $db->query('select m.name, m.picture, p.* from members m, posts p where
                           <div class="simplebar-height-auto-observer-wrapper"><div class="simplebar-height-auto-observer"></div></div>
                           <div class="simplebar-mask">
                               <div class="simplebar-offset" style="right: 0px; bottom: 0px;">
-                                  <div class="simplebar-content-wrapper" style="height: 100%; overflow: hidden scroll;">
+                                  <div class="simplebar-content-wrapper" style="height: 100%;">
                                       <div class="simplebar-content" style="padding: 16px;">
                                           <nav class="nav nav-gap-y-1 flex-column">
-                                              <a href="join/" class="nav__link nav-link-faded has-icon active">会員登録</a>
+                                              <a href="user_edit.php" class="nav__link nav-link-faded has-icon active">アカウント情報</a>
                                               <a href="join/logout.php" class="nav__link nav-link-faded has-icon">ログアウト</a>
                                               <a href="join/cancel.php" class="nav__link nav-link-faded has-icon">退会する</a>
                                           </nav>
@@ -72,10 +72,7 @@ $posts = $db->query('select m.name, m.picture, p.* from members m, posts p where
                                   </div>
                               </div>
                           </div>
-                          <div class="simplebar-placeholder" style="width: 234px; height: 292px;"></div>
                       </div>
-                      <div class="simplebar-track simplebar-horizontal" style="visibility: hidden;"><div class="simplebar-scrollbar" style="width: 0px; display: none;"></div></div>
-                      <div class="simplebar-track simplebar-vertical" style="visibility: visible;"><div class="simplebar-scrollbar" style="height: 151px; display: block; transform: translate3d(0px, 0px, 0px);"></div></div>
                   </div>
               </div>
               <!-- /Inner sidebar body -->
@@ -103,7 +100,7 @@ $posts = $db->query('select m.name, m.picture, p.* from members m, posts p where
                 <?php foreach($posts as $post):?>
 
                     <div class="card mb-2">
-                        <a href="view.php?id=<?php echo htmlspecialchars($post['id'], ENT_QUOTES); ?>">
+                        <a class="card-in" href="view.php?id=<?php echo htmlspecialchars($post['id'], ENT_QUOTES); ?>">
                         <div class="card-body p-2 p-sm-3">
                             <div class="media forum-item">
                                 <div class="img-box">  
@@ -113,7 +110,8 @@ $posts = $db->query('select m.name, m.picture, p.* from members m, posts p where
                                     <p class="">
                                         <?php echo htmlspecialchars($post['message'], ENT_QUOTES); ?>
                                     </p>
-                                    <p class="text-muted"><strong><?php echo htmlspecialchars($post['name'], ENT_QUOTES); ?></strong> posted <span class="text-secondary font-weight-bold"><?php echo htmlspecialchars($post['created'], ENT_QUOTES); ?></span></p>                
+                                    <p class="text-muted"><strong><?php echo htmlspecialchars($post['name'], ENT_QUOTES); ?></strong> posted <span class="text-secondary font-weight-bold"><?php echo htmlspecialchars($post['created'], ENT_QUOTES); ?></span>
+                                    </p>
                                 </div>
                             </div>
                         </div>
@@ -140,7 +138,7 @@ $posts = $db->query('select m.name, m.picture, p.* from members m, posts p where
           <!-- /Inner main -->
       </div>
   </div>
-  <?php require('footer.php');?>
   </div>  
+  <?php require('footer.php');?>
   </body>
 </html>

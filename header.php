@@ -1,5 +1,8 @@
+<head>
+<link rel="stylesheet" href="/plusultra/css/header-style.css">
+</head>
 <header>
-  <div class="collapse bg-dark" id="navbarHeader">
+  <div class="collapse" id="navbarHeader">
     <div class="container">
       <div class="row">
         <div class="col-sm-8 col-md-7 py-4">
@@ -17,7 +20,7 @@
       </div>
     </div>
   </div>
-  <div class="navbar navbar-dark bg-dark shadow-sm">
+  <div class="navbar navbar-dark shadow-sm">
     <div class="container">
       <!-- 下記コードは消さないで下さい。ログイン時はpost.php 非ログイン時はindex.phpへ遷移 --> 
       <?php if(isset($_SESSION['id'])){

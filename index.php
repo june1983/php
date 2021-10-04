@@ -34,7 +34,7 @@ $posts = $db->query('select m.name, m.picture, p.* from members m, posts p where
                           <div class="simplebar-height-auto-observer-wrapper"><div class="simplebar-height-auto-observer"></div></div>
                           <div class="simplebar-mask">
                               <div class="simplebar-offset" style="right: 0px; bottom: 0px;">
-                                  <div class="simplebar-content-wrapper" style="height: 100%; overflow: hidden scroll;">
+                                  <div class="simplebar-content-wrapper" style="height: 100%;">
                                       <div class="simplebar-content" style="padding: 16px;">
                                           <nav class="nav nav-gap-y-1 flex-column">
                                               <a href="join/" class="nav__link nav-link-faded has-icon active">会員登録</a>
@@ -44,10 +44,7 @@ $posts = $db->query('select m.name, m.picture, p.* from members m, posts p where
                                   </div>
                               </div>
                           </div>
-                          <div class="simplebar-placeholder" style="width: 234px; height: 292px;"></div>
                       </div>
-                      <div class="simplebar-track simplebar-horizontal" style="visibility: hidden;"><div class="simplebar-scrollbar" style="width: 0px; display: none;"></div></div>
-                      <div class="simplebar-track simplebar-vertical" style="visibility: visible;"><div class="simplebar-scrollbar" style="height: 151px; display: block; transform: translate3d(0px, 0px, 0px);"></div></div>
                   </div>
               </div>
               <!-- /Inner sidebar body -->
