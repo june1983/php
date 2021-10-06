@@ -1,0 +1,14 @@
+--修正内容--
+
+header.php&css -> 一部文言を修正
+footer.php&css -> レイアウトとスタイル調整
+thanks.php&css -> レイアウト調整
+view.php&css -> レイアウト調整
+check.php- -> レイアウト調整
+
+join/index.php,login.php, user_edit.php, cancel.php -> タイトル文字のサイズを統一
+index.php, post.php, style.css -> サイトの構成を2列から3列へ変更、3列目にYahoo!の主要ニュースをRSSから取得して表示
+index.php, post.php, view.php -> 写真投稿機能を追加
+
+写真投稿機能を使うためには、postsテーブルに新たにimageという名前のカラムを追加してください。
+※カラムのタイプはvarchar(255)です。（membersのpictureと同じ）

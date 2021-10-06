@@ -1,14 +1,16 @@
 @charset "UTF-8";
 @import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400);
 
+footer {
+  margin-top: 20px;
+  background-color:rgb(29,155,240);  
+}
+
 section{
   text-align:center;
 }
 
 .footer-box {
   color: #fff;
-  margin-top: 30px;
-  height: 80px;
-  padding: 10px 0 0 0;
-  background-color:rgb(29,155,240);
 }
+

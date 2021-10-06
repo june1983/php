@@ -1,0 +1,19 @@
+.thanks-body {
+  display: block;
+  width: 100%;
+  text-align: center;
+  padding-bottom: 30px;
+}
+
+.thanks-body > img {
+  width: 100%;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.login-button {
+  display: inline-block;
+  color: #0d6efd!important;
+  border-color: #0d6efd!important;
+}
+

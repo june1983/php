@@ -73,18 +73,13 @@ require('../dbconnect.php');
     <script src="../js/bootstrap.min.js"></script>
      <!-- cssの読み込み -->
      <link href="../css/index.css" rel="stylesheet">
-    <title>Document</title>
+    <title>会員登録｜PlusUltra!!</title>
 </head>
 <body class="d-flex flex-column min-vh-100">
     <?php require('../header.php');?>
     <main class="container flex-fill py-4 my-4 border shadow p-3 mb-5 bg-white rounded" style="max-width:500px;">
-
-
-    <p>会員登録</p>
+    <h2>会員登録</h2>
     <form action="" method="post" enctype="multipart/form-data" class="container mw-500px" >
-
-    
-    
         <dl>
             <div class="form-floating">
                 <input type="text" name="name"  class="form-control" id="floatingPassword" placeholder="Password" max-width="50%" value="<?php if(!empty($_POST))echo htmlspecialchars($_POST['name'], ENT_QUOTES); ?>" />

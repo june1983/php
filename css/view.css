@@ -1,3 +1,10 @@
+main {
+  margin-bottom: 30px;
+}
+
+.wrapper {
+  min-height: 350px;
+}
 .delete-button {
   display: inline-block;
   font-size: 14px;
@@ -13,7 +20,14 @@
 .msg > a:hover {
   color: brown;  
 }
+
+.msg-img {
+  width: 100%;
+}
+
 .p-3 {
 	color: #ffffff;
-	background: rgb(29, 155, 240);	/*”wŒiFA”wŒi‰æ‘œ‚Ì“Ç‚İ‚İB*/
+	background: rgb(29, 155, 240);	/*ï¿½wï¿½iï¿½Fï¿½Aï¿½wï¿½iï¿½æ‘œï¿½Ì“Ç‚İï¿½ï¿½İB*/
 }
+
+

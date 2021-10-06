@@ -14,3 +14,7 @@ header.navbar {
 	color: #ffffff;
 	background: rgb(29, 155, 240);	/*背景色、背景画像の読み込み。*/
 }
+
+svg.bi {
+	margin: 0 5px;
+}

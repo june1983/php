@@ -74,13 +74,13 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <!-- BootstrapのJS読み込み -->
     <script src="../js/bootstrap.min.js"></script>
-    <title>ログイン</title>
+    <title>ログイン｜PlusUltra!!</title>
   </head>
   
   <body class="d-flex flex-column min-vh-100">
   <?php require('../header.php');?>
   <main class="container flex-fill py-4 my-4 border shadow p-3 mb-5 bg-white rounded" style="max-width:500px;">
-  <h1>ログイン</h1>
+  <h2>ログイン</h2>
     <form action="" method="post"  class="mt-3">
         
         <div class="form-floating mb-3">

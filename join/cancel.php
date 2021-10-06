@@ -30,13 +30,13 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <!-- BootstrapのJS読み込み -->
     <script src="../js/bootstrap.min.js"></script>
-    <title>退会する</title>
+    <title>退会する｜PlusUltra!!</title>
   </head>
   
   <body class="d-flex flex-column min-vh-100">
   <?php require('../header.php');?>
   <main class="container flex-fill py-4 my-4 border shadow p-3 mb-5 bg-white rounded" style="max-width:500px;">
-  <h1>アカウント情報</h1>
+  <h2>アカウント情報を削除する</h2>
   <div class="container-inside">
     <div class='deactivate__text'>
     <div class='deactivate__text__heading'>必ずご確認ください</div>

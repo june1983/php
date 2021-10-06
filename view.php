@@ -9,6 +9,7 @@ if (empty($_REQUEST['id'])) {
 //投稿を取得する
 $posts = $db->prepare('SELECT m.name,m.picture, p.* FROM members m,posts p WHERE m.id=p.member_id AND p.id=? ORDER BY p.created DESC');
 $posts->execute(array($_REQUEST['id']));
+
 ?>
 
 <!DOCTYPE html>
@@ -17,7 +18,7 @@ $posts->execute(array($_REQUEST['id']));
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bootstrap Sample</title>
+    <title>投稿内容｜PlusUltra!!</title>
     <link href="css/view.css" rel="stylesheet">
     <!-- BootstrapのCSS読み込み -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -28,13 +29,10 @@ $posts->execute(array($_REQUEST['id']));
   </head>
 <body>
 <?php require('header.php');?>
-<main class="container flex-fill py-4 my-4 border shadow p-3 mb-5 bg-white rounded" style="max-width:500px;">
+<main class="container flex-fill py-4 my-4 border shadow p-3 mb-5 bg-white rounded">
 
   <div class="m-5" id="wrap">
-    <div id="head">
-      <h5 class="text-secondary">ひとこと掲示板～詳細</h5>
-    </div>
-    <div id="content">
+    <div class="wrapper" id="content">
     <!-- 下記コードは消さないで下さい。ログイン時はpost.php 非ログイン時はindex.phpへ遷移 --> 
     <?php if(isset($_SESSION['id'])){
           $urlpass = 'post.php';
@@ -48,10 +46,17 @@ $posts->execute(array($_REQUEST['id']));
     ?>
     <div class="p-3">
       <div class="msg">
-        <img src="member_picture/<?php echo htmlspecialchars($post['picture'], ENT_QUOTES); ?>" width="48" height="48" alt="<?php echo htmlspecialchars($post['name'], ENT_QUOTES); ?>" />
-        <p><?php echo htmlspecialchars($post['message'], ENT_QUOTES); ?><span class="name">(<?php echo htmlspecialchars($post['name'], ENT_QUOTES); ?>)</span></p>
+        <img src="member_picture/<?php echo htmlspecialchars($post['picture'], ENT_QUOTES); ?>" class="mr-3 rounded-circle" width="50" height="50" alt="<?php echo htmlspecialchars($post['name'], ENT_QUOTES); ?>" />
+        
+        <p><?php echo htmlspecialchars($post['message'], ENT_QUOTES); ?></p>
+        
+        <?php if(isset($post['image'])): ?> 
+        <img class="msg-img" src="member_picture/<?php echo htmlspecialchars($post['image'], ENT_QUOTES); ?>">
+        <?php endif?>
+        
         <p class="day"><?php echo htmlspecialchars($post['created'], ENT_QUOTES); ?></p>
-        <?php if($_SESSION['id']==$post['member_id']):?>
+        
+        <?php if(isset($_SESSION['id']) && $_SESSION['id']==$post['member_id']):?>
           <a class="delete-button" href="delete.php?id=<?php echo ($post['id']); ?>">投稿を削除する</a>
         <?php endif;?> 
       </div>
