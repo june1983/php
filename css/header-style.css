@@ -18,3 +18,7 @@ header.navbar {
 svg.bi {
 	margin: 0 5px;
 }
+
+.off {
+	display: none;
+}

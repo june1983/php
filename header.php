@@ -11,11 +11,26 @@
         </div>
         <div class="col-sm-4 offset-md-1 py-4">
           <h4 class="text-white">アカウント</h4>
-          <ul class="list-unstyled">
-            <li><a href="/plusultra/join/index.php" class="text-white">会員登録</a></li>
-            <li><a href="/plusultra/join/login.php" class="text-white">ログイン</a></li>
+
+          <?php if(isset($_SESSION['id'])){
+            $login = 'on';
+            $logout = 'off';
+          } else {
+            $login = 'off';
+            $logout = 'on';
+          }
+          ?>
+          
+          <ul class="list-unstyled <?php echo $login;?>">
+            <li><a href="/plusultra/user_edit.php" class="text-white">アカウント情報</a></li>
             <li><a href="/plusultra/join/logout.php" class="text-white">ログアウト</a></li>
           </ul>
+          
+          <ul class="list-unstyled <?php echo $logout;?>">
+            <li><a href="/plusultra/join/index.php" class="text-white">会員登録</a></li>
+            <li><a href="/plusultra/join/login.php" class="text-white">ログイン</a></li>
+          </ul>
+
         </div>
       </div>
     </div>
@@ -41,4 +56,5 @@
       </button>
     </div>
   </div>
+  
 </header>

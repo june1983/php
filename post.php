@@ -29,7 +29,7 @@ if(!empty($_POST)){
 
 //$_FILEに情報があれば（formタグからpost送信されていれば）以下の処理を実行する
 if(!empty($_FILES)){
-    if($_FILES['image'] != '') {
+    if($_FILES['image']['name'] != '') {
     //$_FILESからファイル名を取得する
     $image = date('YmdHis') . $_FILES['image']['name'];   
     //$_FILESから保存先を取得して、member_picture（ローカルフォルダ）に移す
