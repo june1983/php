@@ -69,7 +69,7 @@ $posts = $db->query('select m.name, m.picture, m.email, p.* from members m, post
                             <?php echo htmlspecialchars($post['message'], ENT_QUOTES); ?>
                         </p>
 
-                        <?php if(isset($post['image'])): ?> 
+                        <?php if(isset($post['image']) && $post['image'] != ''): ?> 
                         <img src="member_picture/<?php echo htmlspecialchars($post['image'], ENT_QUOTES); ?>">
                         <?php endif?>
 

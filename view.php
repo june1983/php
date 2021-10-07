@@ -50,7 +50,7 @@ $posts->execute(array($_REQUEST['id']));
         
         <p><?php echo htmlspecialchars($post['message'], ENT_QUOTES); ?></p>
         
-        <?php if(isset($post['image'])): ?> 
+        <?php if(isset($post['image']) && $post['image'] != ''): ?> 
         <img class="msg-img" src="member_picture/<?php echo htmlspecialchars($post['image'], ENT_QUOTES); ?>">
         <?php endif?>
         
