@@ -13,7 +13,7 @@
      <!-- cssの読み込み -->
      <link href="../css/check.css" rel="stylesheet">
 
-    <title>確認画面｜PlusUltra!!</title>
+    <title>会員登録</title>
 
     
 </head>
@@ -42,10 +42,7 @@
             sha1($_SESSION['join']['password']),
             $_SESSION['join']['image']
         ));
-        // foreach($_SESSION['join'] as $post => $value){
-        //     echo $post;
-        //     echo $value;
-        // }
+       
         unset($_SESSION['join']);
 
 
@@ -53,8 +50,8 @@
         exit();
     }
     ?>
-    <main  class="container flex-fill py-4 my-4 border shadow p-3 mb-5 bg-white rounded" style="max-width:500px; ">
-    <form action="" method="post" class="form" style="margin-top: 70px;">
+    <main  class="container flex-fill py-4 my-4 border shadow p-3 mb-5 bg-white rounded" style="max-width:500px;">
+    <form action="" method="post" class="form">
         <input type="hidden" name="action" value="submit" />
         <dl>
         <div class="d-flex bd-highlight align-items-center">
@@ -82,7 +79,7 @@
             
             
         </dl>
-        <div style="text-align: center;"><a href="index.php?action=rewrite " class="btn btn-outline-secondary">&laquo;&nbsp;書き直す</a> | <button type="submit" class="btn btn-outline-primary">登録する</button></div>
+        <div><a href="index.php?action=rewrite " class="btn btn-outline-secondary">&laquo;&nbsp;書き直す</a>  <button type="submit" class="btn btn-outline-primary">登録する</button></div>
     </form>
     </main>
     <?php require('../footer.php');?>

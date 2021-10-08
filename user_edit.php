@@ -21,7 +21,7 @@
         $fileName = $_FILES['image']['name'];
         if (!empty($fileName)) {
             $ext = substr($fileName, -3);
-            if ($ext !== 'jpg' && $ext !== 'gif' && $ext !== 'png') {
+            if ($ext !== 'jpg' && $ext !== 'gif' && $ext !== 'png' && $ext !='peg') {
                 $error['image'] = 'type';
             }
         }
@@ -42,8 +42,10 @@
               $image,
               $_SESSION["id"]
           ));
+          setcookie("email","",time()-3600);
+          setcookie("email",$_POST["email"],time()+60*60*24*14);
     
-          header('Location: ./');
+          header('Location: post.php');
           exit();
       }
     }    
@@ -110,7 +112,10 @@
                 <?php if (empty($fileName) && !empty($error)): ?>
                 <p class="error">* 恐れ入りますが、画像を改めて指定してください</p>
                 <?php endif; ?>
-        <div class=button><button type="submit" class="btn btn-outline-primary">入力内容を確認する</button></div>
+                <div class="d-flex justify-content-between">
+                  <div class=button><button type="submit" class="btn btn-outline-primary">変更する</button></div>
+                  <a href="post.php" class="btn btn-outline-danger">キャンセル</a>
+                </div>
     </form>
     </main>
     <?php require('footer.php');?>
